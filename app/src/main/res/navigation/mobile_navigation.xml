@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_checkin">
+
+    <fragment
+        android:id="@+id/nav_checkin"
+        android:name="com.ubaya.protectcare23.ui.checkin.CheckinFragment"
+        android:label="Check In"
+        tools:layout="@layout/fragment_checkin" />
+
+    <fragment
+        android:id="@+id/nav_history"
+        android:name="com.ubaya.protectcare23.ui.history.HistoryFragment"
+        android:label="History"
+        tools:layout="@layout/fragment_history" />
+
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.ubaya.protectcare23.ui.profile.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile"/>
+</navigation>
