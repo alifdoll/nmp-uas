@@ -14,6 +14,7 @@ import com.ubaya.protectcare23.databinding.FragmentOutBinding
 import com.ubaya.protectcare23.di.Injection
 import com.ubaya.protectcare23.utils.Global
 import kotlinx.coroutines.launch
+import java.text.SimpleDateFormat
 
 class FragmentOut(val listener: OnCheckListener) : Fragment() {
 
@@ -40,7 +41,10 @@ class FragmentOut(val listener: OnCheckListener) : Fragment() {
 
         val checks = Global.checks
         binding.txtLocation.setText(checks.loc_name)
-        binding.txtCheckinTime.setText(checks.checkIn)
+
+        val parser = SimpleDateFormat("EEE, d MMM yyyy HH:mm:ss")
+
+        binding.txtCheckinTime.setText(parser.format(checks.checkIn))
 
         binding.btnCheckout.setOnClickListener {
             viewLifecycleOwner.lifecycleScope.launch {
